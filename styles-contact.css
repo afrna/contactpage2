@@ -60,11 +60,13 @@ html, body {
   width: 100%;
   padding: 0;
   margin: 0;
- background-image: url("images/5.jpeg");
  background-size: cover;
  background-attachment: fixed;
 	
 	
+}
+ .pageone{
+	background-color: #3C525D;
 }
 
 .center {
@@ -74,6 +76,13 @@ html, body {
     margin: 50px auto;
 	text-align: center;
 }
+.centerabout {
+    width: 80%;
+	min-width: 300px;
+	padding: 2%;
+    margin: 50px auto;
+	text-align: left;
+}
    
 #logo {
 	width: 80%;
@@ -82,17 +91,25 @@ html, body {
 	text-align: center;
 }
 
-h1 {
+.h1home {
 	/* FONT-FAMILY GOES HERE CHOOSE FROM TYPEKIT OR GOOGLE FONTS */
 	font-family: 'Ysabeau Office', sans-serif;
 	font-size: 2em;
 	border:solid;
-	border-color: #eed5a9;
     margin: 0px auto 10px auto;
-    color: #fff;
-	background-color: #d9c8a7;
+    color: #7697a6;
+	background-color: #dddeda;
 	width: 60%;
 	border-radius: 25px;
+	padding: 10px;
+}
+.h1about {
+	/* FONT-FAMILY GOES HERE CHOOSE FROM TYPEKIT OR GOOGLE FONTS */
+	font-family: 'Ysabeau Office', sans-serif;
+	font-size: 7em;
+    color: #7697a6;
+	background-color: #dddeda;
+	width: 60%;
 	padding: 10px;
 }
 
@@ -101,7 +118,7 @@ h2 {
 	 font-family: 'Ysabeau Office', sans-serif;
 	font-size: 1.5em;
     line-height: 1.4;
-    color: rgba(124, 77, 16, 0.843);
+    color: rgba(255, 255, 255, 0.843);
     padding: 0px 0px;
     margin: 0px auto 25px auto;
 	font-weight: 600;
@@ -114,11 +131,22 @@ p {
     line-height: 1.6;
     color: #fff;
 }
-
+.pabout {
+	font-family: 'Ysabeau Office', sans-serif;
+	font-size: 2em;
+	width: 100%;
+	color: #3c535d;
+}
+.aabout {
+	font-family: 'Ysabeau Office', sans-serif;
+	font-size: 1.2em;
+	color: #3c535d;
+	text-decoration: none;
+}
 nav {
 	font-family: 'Ysabeau Office', sans-serif;
 	font-size: 1.2em;
-	width: 60%;
+	width: 100%;
 	margin: 0 auto;
 	margin-top: 2em;
 }
@@ -132,14 +160,14 @@ nav a {
 	padding: 10px;
 }
 
-a {
+nav a {
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 
 }
 
 a:hover {
-	color: rgb(124, 77, 16, 0.843);
+	text-decoration: underline;
 }
 
 @media only screen and (max-width: 480px) {
@@ -152,3 +180,77 @@ a:hover {
 	line-height: 1.5em;
     }
 }
+.logosmall {
+	margin-top: 5px;
+    border-radius: 25px;
+    text-align: center;
+}
+@mixin clearfix {
+	&:after {
+	display: table;
+	clear: both;
+	}
+	}
+	html {
+	box-sizing: border-box;
+	}
+	*, *:before, *:after {
+	box-sizing: inherit;
+	}
+	
+	body {
+	background-color:#dddeda;
+	min-height: 100%;
+	}
+	
+	header a {
+	text-decoration: none;
+	color: inherit
+	}
+	
+	.main-header {
+	background-color: #3C525D;
+	padding: 5px 40px 10px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	}
+	@media (min-width: 1025px) {
+	.main-header {
+	flex-direction: row;
+	justify-content: space-between;
+	}
+	}
+	
+	.name {
+	color: white;
+	font-size: 1.35em;
+	margin: 0;
+	}
+	header a {
+		font-family: 'Ysabeau Office', sans-serif;
+		font-size: 1.2em;
+		text-align: center;
+	display: block;
+	padding: 10px 15px;
+	}
+	
+	.main-nav {
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+	}
+	header a {
+	text-align: center;
+	display: inline-block;
+	padding: 10px 15px;
+	font-size: .95em;
+	color: #ffffff;
+	text-transform: uppercase;
+	}
+	.container {
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
